@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Products</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      td,
+      th {
+        border: 1px solid #ccc;
+        padding: 8px 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Add product</h2>
+
+    <form id="productForm">
+      <input type="text" id="name" placeholder="Name" required />
+      <input
+        type="number"
+        id="price"
+        placeholder="Price"
+        step="0.01"
+        required
+      />
+      <button type="submit">Add</button>
+    </form>
+
+    <h2>Products</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+
+    <script>
+      const form = document.getElementById("productForm");
+      const tableBody = document.getElementById("tableBody");
+
+      function renderTable(products) {
+        tableBody.innerHTML = "";
+
+        products.forEach((p) => {
+          const row = document.createElement("tr");
+
+          row.innerHTML = `
+        <td>${p.id}</td>
+        <td>${p.name}</td>
+        <td>${p.price}</td>
+      `;
+
+          tableBody.appendChild(row);
+        });
+      }
+
+      async function loadProducts() {
+        const res = await fetch("http://127.0.0.1:3333/products");
+        const data = await res.json();
+        renderTable(data);
+      }
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const price = document.getElementById("price").value;
+
+        const res = await fetch("http://127.0.0.1:3333/products", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name, price }),
+        });
+
+        const data = await res.json();
+
+        renderTable(data);
+        form.reset();
+      });
+
+      loadProducts();
+    </script>
+  </body>
+</html>
