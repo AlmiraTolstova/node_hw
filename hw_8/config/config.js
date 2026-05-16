@@ -1,5 +1,7 @@
 import dotenv from "dotenv";
-dotenv.config();
+dotenv.config({
+  path: "/Users/almiratolstova/Documents/Projects/ICH/node_hw/hw_8/.env",
+});
 
 const db_config = {
   development: {

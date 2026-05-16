@@ -17,7 +17,7 @@ const Book = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    size: {
+    year: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },

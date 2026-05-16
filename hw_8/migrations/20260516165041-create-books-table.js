@@ -17,7 +17,7 @@ export async function up(queryInterface, Sequelize) {
       type: Sequelize.STRING,
       allowNull: false,
     },
-    size: {
+    year: {
       type: Sequelize.INTEGER,
       allowNull: false,
     },
