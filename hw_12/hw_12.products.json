@@ -1,0 +1,64 @@
+[{
+  "_id": {
+    "$oid": "6a1422f9cf605029f426bd7f"
+  },
+  "name": "Orange",
+  "price": 6,
+  "description": "Fresh orange fruit"
+},
+{
+  "_id": {
+    "$oid": "6a14231ecf605029f426bd80"
+  },
+  "name": "Apple",
+  "price": 4.5,
+  "description": "Red sweet apple"
+},
+{
+  "_id": {
+    "$oid": "6a142334cf605029f426bd82"
+  },
+  "name": "Mango",
+  "price": 8,
+  "description": "Tropical juicy mango"
+},
+{
+  "_id": {
+    "$oid": "6a142351cf605029f426bd83"
+  },
+  "name": "Grapes",
+  "price": 5.5,
+  "description": "Seedless green grapes"
+},
+{
+  "_id": {
+    "$oid": "6a14235dcf605029f426bd84"
+  },
+  "name": "Pineapple",
+  "price": 9,
+  "description": "Sweet tropical pineapple"
+},
+{
+  "_id": {
+    "$oid": "6a142367cf605029f426bd85"
+  },
+  "name": "Strawberry",
+  "price": 10,
+  "description": "Fresh red strawberries"
+},
+{
+  "_id": {
+    "$oid": "6a142377cf605029f426bd86"
+  },
+  "name": "Watermelon",
+  "price": 12,
+  "description": "Large juicy watermelon"
+},
+{
+  "_id": {
+    "$oid": "6a142381cf605029f426bd87"
+  },
+  "name": "Kiwi",
+  "price": 2.8,
+  "description": "Green vitamin-rich kiwi"
+}]
